@@ -1,0 +1,55 @@
+{% load static %} <!-- Carga el módulo para usar archivos estáticos en Django -->
+
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el documento como HTML5 con idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsiva -->
+    <title>Hola Profe Orlando</title> <!-- Título de la página -->
+    <!-- Carga de Bootstrap para estilos predeterminados -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fuente personalizada para el texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap" rel="stylesheet">
+    <!-- CSS personalizado para la página -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<header>
+    <div class="hola"> <!-- Contenedor del encabezado -->
+        <h1 class="animated-text">Hola Profeeee!</h1> <!-- Texto animado de bienvenida -->
+        <p class="intro-text">Estamos situados en el futuro donde todo es más moderno y funcional.</p> <!-- Breve introducción -->
+    </div>
+</header>
+
+<body>
+    <div class="video-container"> <!-- Contenedor para el video de fondo -->
+        <video autoplay loop muted> <!-- Configuración para reproducir el video automáticamente sin sonido -->
+            <source src="{% static 'videos/fondo.mp4' %}" type="video/mp4"> <!-- Carga el video desde los archivos estáticos -->
+        </video>
+    </div>
+
+    <!-- Scripts de Bootstrap y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<footer>
+    <div class="hola"> <!-- Contenedor principal del pie de página -->
+        <div class="row mt-4"> <!-- Fila para dividir el contenido en dos columnas -->
+            <div class="col-md-6"> <!-- Columna izquierda -->
+                <section class="technology"> <!-- Sección de tecnología -->
+                    <h2>Hay nuevas innovaciones Tecnológicas!</h2> <!-- Título de la sección -->
+                    <p class="intro-text">Humanoides diseñados para gestionar cualquier tarea con facilidad y una mente manejada por IA para tomar decisiones.</p> <!-- Descripción -->
+                </section>
+            </div>
+            <div class="col-md-6"> <!-- Columna derecha -->
+                <section class="vision"> <!-- Sección de visión -->
+                    <h2>Robot de fondo</h2> <!-- Título de la sección -->
+                    <p class="intro-text">Este robot decide bailar!</p> <!-- Descripción -->
+                </section>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

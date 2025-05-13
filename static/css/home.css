@@ -1,0 +1,103 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Degradado de fondo */
+    color: #f8f9fa; /* Color del texto */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin relleno */
+    min-height: 100vh; /* Altura mínima igual al alto de la pantalla */
+    overflow-y: scroll; /* Permite el desplazamiento vertical */
+    text-align: center; /* Centra el texto */
+}
+
+/* Contenedor principal del encabezado */
+.hola {
+    padding: 2rem; /* Espaciado interno */
+}
+
+/* Contenedor del video de fondo */
+.video-container {
+    position: fixed; /* Fijo en relación a la ventana */
+    top: 0; /* Alineado al borde superior */
+    left: 35%; /* Centrado horizontalmente */
+    width: 30%; /* Ancho del video */
+    height: 30%; /* Alto del video */
+    overflow: hidden; /* Oculta desbordes */
+    z-index: -1; /* Envía el video detrás del contenido */
+    position: relative; /* Posicionamiento relativo para efectos */
+    margin: -0.5rem; /* Ajuste de márgenes */
+}
+
+/* Estilo del video */
+video {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Alto completo del contenedor */
+    object-fit: cover; /* Ajusta el video para cubrir el contenedor */
+    filter: blur(0px); /* Sin desenfoque */
+}
+
+/* Contenedor principal */
+.container {
+    padding: 30px; /* Espaciado interno */
+    min-height: 100vh; /* Altura mínima igual al alto de la pantalla */
+    display: flex; /* Flexbox para alineación */
+    flex-direction: column; /* Dirección en columna */
+    justify-content: center; /* Centra verticalmente */
+}
+
+/* Estilo del título principal */
+h1.animated-text {
+    font-size: 3rem; /* Tamaño de fuente */
+    color: #000000; /* Color del texto */
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff; /* Efecto de neón */
+    animation: neon-glow 1.5s ease-in-out infinite alternate; /* Animación de brillo */
+    margin: 20px 0; /* Márgenes verticales */
+}
+
+/* Estilo del texto introductorio */
+p.intro-text {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    color: #ffffff; /* Color del texto */
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* Efecto de neón */
+    margin: 5px 0; /* Márgenes verticales */
+    animation: glitch 1.5s infinite; /* Animación de "glitch" */
+    border: 2px solid #ff00ff; /* Borde rosado */
+    padding: 0.5rem; /* Espaciado interno */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo de los títulos de secciones */
+section h2 {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    color: #000000; /* Color del texto */
+    text-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff, 0 0 35px #00ffff; /* Efecto de neón */
+    margin: 20px 0; /* Márgenes verticales */
+}
+
+/* Estilo de los párrafos en las secciones */
+section p {
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #ffffff; /* Color del texto */
+    text-shadow: 0 0 8px #ff00ff, 0 0 16px #ff00ff; /* Efecto de neón */
+    margin: 10px 0; /* Márgenes verticales */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Animación de brillo neón */
+@keyframes neon-glow {
+    0% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; }
+    100% { text-shadow: 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff; }
+}
+
+/* Animación de "glitch" */
+@keyframes glitch {
+    0% { transform: translate(2px, 2px); }
+    20% { transform: translate(-2px, -2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
